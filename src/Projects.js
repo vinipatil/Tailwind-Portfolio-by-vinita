@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import projectImage1 from './images/shop.png';
 import projectImage2 from './images/tribute.png';
 import projectImage3 from './images/para.png';
@@ -10,10 +10,18 @@ import projectImage8 from './images/session.png';
 import projectImage9 from './images/local.png';
 
 const Projects = () => {
-    const [showModal, setShowModal] = useState(null); 
+    const [showModal, setShowModal] = useState(null);
+    const projectsRef = useRef(null);
 
     const toggleModal = (projectId) => {
         setShowModal(showModal === projectId ? null : projectId);
+        if (showModal !== null) {
+            document.body.style.overflow = 'auto';
+        } else {
+            document.body.style.overflow = 'hidden';
+        }
+        // Scroll to the top of the projects section
+        projectsRef.current.scrollIntoView({ behavior: 'smooth' });
     };
 
 
@@ -37,8 +45,8 @@ const Projects = () => {
         { id: 9, title: "Registration form using Local Storage", shortDescription: " Utilizing local storage capabilities, user data is securely stored within the browser environment. Upon successful registration, users gain access to a login interface where they can securely authenticate themselves.", fullDescription: "The registration and login form is a comprehensive solution designed to streamline user authentication processes. Leveraging HTML, CSS, and JavaScript, this system empowers users to create accounts by providing vital information including name, email, mobile number, and password. Utilizing local storage capabilities, user data is securely stored within the browser environment. Upon successful registration, users gain access to a login interface where they can securely authenticate themselves. Once logged in, users are greeted with a visually appealing dashboard that neatly presents their submitted information in a structured table layout. This approach not only ensures data privacy but also provides users with a seamless and intuitive experience for managing their accounts.", imageUrl: projectImage9, projectUrl: "https://local-storage-by-vinita.vercel.app/" },
     ];
 
-    return (
-        <section id="projects" className="py-8 w-full">
+     return (
+        <section id="projects" className="py-8 w-full relative" ref={projectsRef}>
             <div className="container mx-auto px-9">
                 <h2 className="text-6xl text-center font-bold mb-4">Projects</h2><br></br>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -56,8 +64,8 @@ const Projects = () => {
                                 <p className="text-gray-700">{project.shortDescription}</p>
                                 <a href="#" className="block mt-4 text-blue-700 text-xl font-bold hover:nounderline" onClick={() => toggleModal(project.id)}>Read more</a>
                                 {showModal === project.id && (
-                                    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-                                        <div className="bg-white p-8 rounded-lg w-96">
+                                    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+                                        <div className="bg-white p-8 rounded-lg w-full max-w-md mt-10">
                                             <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
                                             <p className="text-gray-700">{project.fullDescription}</p>
                                             <button onClick={() => toggleModal(project.id)} className="mt-4 bg-red-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none">Close</button>

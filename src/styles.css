@@ -18,3 +18,68 @@
     animation: float 2s ease-in-out infinite;
   }
   
+
+  .education-card {
+    opacity: 0;
+  }
+  
+  .animate__fadeInTopLeft {
+    animation: fadeInTopLeft 1s forwards;
+  }
+  
+  .animate__fadeInTopRight {
+    animation: fadeInTopRight 1s forwards;
+  }
+  
+  .animate__fadeInBottomLeft {
+    animation: fadeInBottomLeft 1s forwards;
+  }
+  
+  .animate__fadeInBottomRight {
+    animation: fadeInBottomRight 1s forwards;
+  }
+  
+  @keyframes fadeInTopLeft {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -50%);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+  
+  @keyframes fadeInTopRight {
+    0% {
+      opacity: 0;
+      transform: translate(50%, -50%);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+  
+  @keyframes fadeInBottomLeft {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, 50%);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+  
+  @keyframes fadeInBottomRight {
+    0% {
+      opacity: 0;
+      transform: translate(50%, 50%);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+  
