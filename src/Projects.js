@@ -49,7 +49,7 @@ const Projects = () => {
         <section id="projects" className="py-8 w-full relative" ref={projectsRef}>
             <div className="container mx-auto px-9">
                 <h2 className="text-6xl text-center font-bold mb-4">Projects</h2><br></br>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
                     {projectsData.map(project => (
                         <div key={project.id} className="bg-white shadow-md rounded-lg overflow-hidden">
                             <a href={project.projectUrl} target="_blank" rel="noopener noreferrer">

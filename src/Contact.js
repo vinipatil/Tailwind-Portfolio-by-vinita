@@ -7,7 +7,7 @@ const Contact = () => {
       <div className="container mx-auto px-4 flex flex-col lg:flex-row">
         <div className="w-full lg:w-1/2 lg:mr-4">
           <div className="bg-white rounded-md shadow-md p-6">
-            <h2 className="text-4xl font-bold mb-4  text-center">Contact Me</h2>
+            <h2 className="text-4xl font-bold mb-4  text-center">Contact</h2>
             <form className="max-w-md mx-auto lg:max-w-none">
               <div className="mb-4">
                 <label htmlFor="name" className="text-xl block font-semibold mb-2">Name</label>
