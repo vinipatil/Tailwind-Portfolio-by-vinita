@@ -11,7 +11,7 @@ const Education = () => {
   return (
     <section id="education" className="py-8 bg-gray-100 w-full">
       <div className="container mx-auto px-4">
-        <h2 className="text-5xl text-center font-bold mb-4">Education</h2>
+        <h2 className="text-5xl text-center font-bold mb-4">Education</h2><br></br>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
           <div className="education-card animate__animated animate__fadeInTopLeft flex items-center">
             <div className="bg-white rounded-md shadow-md p-6 bg-gradient-to-r from-blue-300 to-blue-500 w-full">

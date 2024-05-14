@@ -21,8 +21,8 @@ const Header = () => {
           <ul className="flex space-x-4 md:space-x-8 mr-10">
             <li><a href="#" className="text-base md:text-lg font-medium hover:text-black" onClick={(e) => handleNavClick('about', e)}>About</a></li>
             <li><a href="#" className="text-base md:text-lg font-medium hover:text-black" onClick={(e) => handleNavClick('education', e)}>Education</a></li>
-            <li><a href="#" className="text-base md:text-lg font-medium hover:text-black" onClick={(e) => handleNavClick('skills', e)}>Skills</a></li>
             <li><a href="#" className="text-base md:text-lg font-medium hover:text-black" onClick={(e) => handleNavClick('projects', e)}>Projects</a></li>
+            <li><a href="#" className="text-base md:text-lg font-medium hover:text-black" onClick={(e) => handleNavClick('skills', e)}>Skills</a></li>
             <li><a href="#" className="text-base md:text-lg font-medium hover:text-black" onClick={(e) => handleNavClick('contact', e)}>Contact</a></li>
           </ul>
         </nav>
